@@ -1,0 +1,39 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+@keyframes kf-loading {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.i-pagination {
+  padding: 20px;
+  line-height: 44px;
+  font-size: 28px;
+  text-align: center;
+  color: #b0b0b0;
+
+  .pagination-icon,
+  .pagination-text {
+    vertical-align: middle;
+  }
+
+  .pagination-icon {
+    margin-right: 12px;
+    width: 27px;
+    height: 27px;
+  }
+
+  &.loading .pagination-icon {
+    animation: kf-loading 1000ms linear infinite;
+  }
+
+  .pagination-text {
+    display: inline-block;
+  }
+}

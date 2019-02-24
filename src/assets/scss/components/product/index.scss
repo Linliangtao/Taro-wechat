@@ -1,0 +1,91 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+// 商品列表
+.i-product-list {
+  @include set-flex($wrap: wrap);
+  margin: 10px 15px;
+
+  .pl-item {
+    flex: 0 0 auto;
+    padding: 10px;
+    width: 50%;
+  }
+}
+
+// 商品列表项
+.i-product-item {
+  display: inline-block;
+  background: #fff;
+  border: solid 1px #e5e5e5;
+  border-radius: 8px;
+
+  .pi-cover {
+    padding: 10px;
+    width: 100%;
+    height: 338px;
+  }
+
+  .pi-cover-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pi-bt-container {
+    margin: 0 10px;
+    padding: 14px 5px 18px;
+    border-top: solid 1px #e5e5e5;
+  }
+
+  .pi-title {
+    @include set-text-multi-line(1);
+    line-height: 44px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #272727;
+  }
+
+  .pi-subtitle {
+    @include set-text-multi-line(1);
+    margin-bottom: 6px;
+    line-height: 40px;
+    font-size: 24px;
+  }
+
+  .pi-ft {
+    @include set-flex;
+    line-height: 32px;
+    color: #272727;
+  }
+
+  .pi-price,
+  .pi-original-price,
+  .buy-btn {
+    display: inline-block;
+  }
+
+  .pi-original-price,
+  .buy-btn {
+    flex: 0 0 auto;
+  }
+
+  .pi-price {
+    flex: 1 1 auto;
+    font-size: 30px;
+  }
+
+  .pi-original-price {
+    font-size: 20px;
+    text-decoration: line-through;
+  }
+
+  .buy-btn {
+    margin-left: 5px;
+    padding: 0 16px;
+    background: $color-primary;
+    min-width: 100px;
+    border-radius: 16px;
+    font-size: 22px;
+    color: #fff;
+  }
+}

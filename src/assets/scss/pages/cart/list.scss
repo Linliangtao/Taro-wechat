@@ -1,0 +1,79 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-page-cart-list {
+  padding-top: 20px;
+
+  .cl-total-bar {
+    padding: 18px 36px;
+    background: #fff;
+    line-height: 44px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+    color: #d45048;
+  }
+
+  .cltb-text {}
+
+  .cl-footbar {
+    @include set-flex;
+    @include set-footbar;
+    padding: 6px 10px;
+  }
+
+  .clf-checkbox-group {
+    flex: 1;
+    align-self: center;
+  }
+
+  .clf-checkbox {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 24px;
+    color: #ee725a;
+  }
+
+  .clf-checkbox-icon,
+  .clf-checkbox-text {
+    vertical-align: middle;
+  }
+
+  .clf-checkbox-icon {
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .clf-checkbox-text {
+    display: inline-block;
+  }
+
+  .clf-btn-container {
+    flex: 0 0 auto;
+  }
+
+  .clf-btn {
+    padding: 30px 20px;
+    background: #999;
+    min-width: 200px;
+    line-height: 48px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+
+    &:first-child {
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  }
+
+  .clf-submit {
+    background: $color-danger;
+  }
+}

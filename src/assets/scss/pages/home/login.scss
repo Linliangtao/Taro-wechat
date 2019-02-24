@@ -1,0 +1,14 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-page-login {
+
+  & > .btn-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}

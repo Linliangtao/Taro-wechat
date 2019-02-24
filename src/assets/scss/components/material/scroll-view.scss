@@ -1,0 +1,17 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-material-scroll-view {
+  //height: 375px;
+
+  .msv-scroll-view {
+    @include set-text-single-line;
+    //height: 100%;
+    font-size: 0;
+  }
+
+  .msv-image-item {
+    width: 50%;
+    height: auto;
+  }
+}

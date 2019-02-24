@@ -1,0 +1,86 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-number-input {
+  display: inline-block;
+  background: #fff;
+
+  &.small {
+
+    .ni-btn {
+      width: 40px;
+      height: 30px;
+      line-height: 28px;
+    }
+
+    .ni-btn-icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .ni-minus {
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    .ni-plus {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .ni-control {
+      padding: 0 12px;
+      width: 58px;
+      height: 30px;
+      font-size: 22px;
+    }
+  }
+
+  .number-input-container {
+    @include set-flex;
+  }
+
+  .ni-btn {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 48px;
+    line-height: 46px;
+    border: solid 1px #acacac;
+
+    &.disabled {
+      background: #ececec;
+    }
+  }
+
+  .ni-btn-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ni-minus {
+    border-right: none;
+    border-bottom-left-radius: 18px;
+    border-top-left-radius: 18px;
+  }
+
+  .ni-plus {
+    border-left: none;
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .ni-control-container {
+    flex: 1;
+  }
+
+  .ni-control {
+    padding: 0 20px;
+    width: 86px;
+    height: 48px;
+    min-height: 30px;
+    border: solid 1px #acacac;
+    font-size: 24px;
+    text-align: center;
+    color: #666;
+  }
+}

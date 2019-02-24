@@ -1,0 +1,27 @@
+// ======== 重置小程序默认样式 ========
+@import "../modules/variables";
+@import "../modules/mixins";
+
+view,
+text,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+page {
+  @include set-size(100%, 100%);
+  background: $bg-color-grey;
+  color: $font-color-default;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: $font-size-default;
+}
+
+// ==== 表单 ====
+// placeholder
+.input-placeholder,
+.textarea-placeholder {
+  color: $input-placeholder-color;
+}

@@ -1,0 +1,107 @@
+  @import "../../modules/variables";
+  @import "../../modules/mixins";
+  /*********** 背景 *************/
+  .nav-bg{
+    background-color: #FDFDFD;
+  }
+  /*********** 下划线 *************/
+  .li-border-b-1{
+    border-bottom: 2px solid rgb(230,230,230);
+  }
+  .li-border-top{
+    border-top:2px solid #D3D3D3;
+  }
+  //顶部
+
+  .top-banner{
+    width: 750px;
+    height: 281px;
+  }
+  .top-banner-bg{
+    width: 100%;
+  }
+  .user {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+  }
+  .user-images{
+    width:149px;
+    height: 151px;
+    border-radius:50%;
+    margin:58px 0 0 36px;
+  }
+  .message {
+    height:44px;
+    padding:0 0 0 36px;
+  }
+  .name{
+    color:#222;
+    text-align: center;
+  }
+
+  /******图标*******/
+  .list{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 25px 19px 41px 19px;
+    margin:21px 0 20px 0 ;
+  }
+  .list-li{
+    width: 113px;
+    height: 113px;
+    margin: auto;
+    padding: 26px 10px 41px 19px;
+    Text{
+      font-size: 20px;
+      display: block;
+    }
+  }
+  .list-on{
+    text-align: center;
+  }
+  .image-size{
+    width:51px;
+    height: 56px;
+  }
+
+
+  /****菜单******/
+  .sales-volume{
+    position: relative;
+    margin: 0 0 0 13px;
+  }
+  .sales-volume-wrap View{
+    display: inline-block;
+  }
+  .xl-icon{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+  }
+  .xl-icon-left{
+    margin: 25px 43px 0 0;
+  }
+  .icon-size{
+    width:12px;
+    height:17px;
+  }
+  .nav-inner{
+    padding: 28px 0;
+    margin: 0 41px;
+  }
+  .nav-bg{
+    background-color: #FDFDFD;
+  }
+  .nav-meu{
+    display: flex;
+    justify-content:space-between;
+  }
+
+
+
+
+
+

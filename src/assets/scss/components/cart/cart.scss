@@ -1,0 +1,97 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-cart-item {
+  @include set-flex;
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+
+  .ci-extra {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+  }
+
+  .cie-delete {
+    @include set-flex;
+    align-items: center;
+    padding: 20px;
+    background: #db716b;
+    min-width: 100px;
+    height: 100%;
+    line-height: 40px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .cie-delete-text {
+    flex: 1;
+  }
+
+  .ci-main {
+    @include set-flex;
+    padding: 25px 0;
+  }
+
+  .ci-checkbox-container,
+  .ci-cover {
+    flex: 0 0 auto;
+  }
+
+  .ci-checkbox {
+    @include set-flex;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 83px;
+  }
+
+  .ci-checkbox-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .ci-cover {
+    font-size: 0;
+  }
+
+  .ci-cover-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ci-info-container {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 25px;
+    padding-top: 6px;
+    padding-bottom: 48px;
+    flex: 1;
+  }
+
+  .cii-name {
+    @include set-text-multi-line(1);
+    line-height: 44px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #272727;
+  }
+
+  .cii-price {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-danger;
+  }
+
+  .cii-number {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

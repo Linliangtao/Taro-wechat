@@ -1,0 +1,134 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+
+.i-order-list {
+  margin-top: 100px;
+  padding: 0 17px;
+}
+
+.i-order-item {
+  background: white;
+  padding: 0 24px;
+  margin: 26px 0;
+  border-radius: 20px;
+
+  .oi-info {
+    height: 60px;
+    @include set-flex();
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    border-bottom: 1px solid #e4e4e4;
+
+    .oi-info-status {
+      color: $color-danger;
+    }
+  }
+
+  .oi-detail-box {
+    
+    .show-border {
+      border-top: 1px solid #e4e4e4;
+    }
+    
+    .show-border:first-child{
+      border: none;
+    }
+
+    .oi-detail {
+      padding: 26px 0;
+      @include set-flex();
+      font-size: 24px;
+  
+      .oi-detail-img-box {
+        @include set-size(150px, 150px);
+        overflow: hidden;
+  
+        .oi-detail-img {
+          @include set-size(150px, 150px);
+        }
+      }
+  
+      .oi-detail-cont {
+        flex-grow: 1;
+        padding-left: 20px;
+        @include set-flex($direction: column);
+  
+        .oi-detail-name {
+          @include set-text-multi-line(2);
+          color: #272727;
+          font-size: 28px;
+          font-weight: bold;
+        }
+  
+        .oi-detail-type {
+          flex-grow: 1;
+        }
+  
+        .oi-detail-price {
+          @include set-flex();
+          justify-content: space-between;
+  
+          .oi-detail-price-num {
+            color: $color-danger;
+          }
+  
+          .oi-detail-price-point {
+            color: $color-default;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  
+
+  .oi-total {
+    font-size: 24px;
+    @include set-flex(column);
+    justify-content: flex-end;
+    border-top: 1px solid #e4e4e4;
+
+    .oi-total-money {
+      height: 60px;
+      line-height: 60px;
+      @include set-flex();
+      justify-content: flex-end;
+
+      .oi-money-box {
+        align-items: center;
+        color: $color-danger;
+      }
+    }
+
+    .oi-btn-area {
+      @include set-flex();
+      justify-content: flex-end;
+      padding: 10px 0 20px;
+
+      .oi-btn {
+        height: 40px;
+        line-height: 38px;
+        min-width: 140px;
+        width: 140px;
+        border: 1px solid #e4e4e4;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      .oi-cancel-btn {
+        color: $color-danger;
+        border: 1px solid $color-danger;
+      }
+
+      .oi-pay-btn {
+        color: white;
+        background: $color-danger;
+      }
+    }
+  }
+}

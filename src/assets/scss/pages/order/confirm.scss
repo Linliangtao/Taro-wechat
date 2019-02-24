@@ -1,0 +1,230 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-page-confirm-order {
+  padding: 20px 18px 134px;
+
+  .co-extra-form,
+  .co-main-container {
+    padding: 10px 25px;
+    background: #fff;
+    border-radius: 18px;
+  }
+
+  // 扩展表单
+  .co-extra-form {
+    margin-bottom: 20px;
+  }
+
+  .coef-tips {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 100px;
+    background: #cb543d;
+    line-height: 24px;
+    border-radius: 18px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .coef-tips-icon,
+  .coef-tips-text {
+    vertical-align: middle;
+  }
+
+  .coef-tips-icon {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+  }
+
+  .coef-tips-text {
+    display: inline-block;
+  }
+
+  .coef-group {
+    @include set-flex;
+    align-items: center;
+  }
+
+  .coef-group-label {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    min-width: 105px;
+    line-height: 48px;
+    font-size: 24px;
+    text-align: right;
+    color: #666;
+  }
+
+  .coef-control-container {
+    flex: 1;
+  }
+
+  .coef-control {
+    height: 48px;
+    font-size: 22px;
+    color: #272727;
+  }
+
+  // 主要区域
+  .co-main-container {
+    background: #fff;
+  }
+
+  // 物流
+  .co-logistics {
+    @include set-bg-init($pos: left bottom, $size: 98px 2px, $repeat: repeat-x);
+    position: relative;
+    padding: 5px 45px 25px 0;
+    line-height: 32px;
+    font-size: 24px;
+    color: #666;
+
+    &.empty {
+      padding-top: 25px;
+
+      .col-consignee {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .col-consignee {
+    margin-bottom: 4px;
+    line-height: 36px;
+  }
+
+  .colc-name,
+  .colc-mobile {
+    display: inline-block;
+  }
+
+  .colc-name {
+    font-weight: bold;
+  }
+
+  .colc-mobile {
+    margin-left: 20px;
+  }
+
+  .col-address,
+  .col-postcode {
+    display: block;
+  }
+
+  .col-address {}
+  .col-postcode {}
+
+  .col-edit-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+  }
+
+  // 产品信息
+  .co-product-list {
+    margin: 0 -24px;
+  }
+
+  // 其他信息
+  .co-groups {
+    line-height: 36px;
+    font-size: 24px;
+    color: #666;
+  }
+
+  .co-group {
+    @include set-flex;
+    position: relative;
+    padding: 27px 0 27px 5px;
+    border-top: solid 1px #e5e5e5;
+  }
+
+  .cog-label {
+    flex: 0 0 auto;
+    margin-right: 30px;
+  }
+
+  .cog-icon {
+    position: relative;
+    top: -2px;
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+  }
+
+  .cog-control-container {
+    flex: 1;
+  }
+
+  .cog-control-static {
+    display: block;
+    text-align: right;
+
+    &.red {
+      color: $color-danger;
+    }
+  }
+
+  .cog-control {
+    width: 100%;
+    line-height: 36px;
+    font-size: 24px;
+  }
+
+  .cog-addon-icon {
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 16px;
+  }
+
+  // 底部栏
+  .co-footbar {
+    @include set-flex;
+    @include set-footbar;
+    align-items: center;
+    padding: 6px 25px;
+  }
+
+  .cof-total {
+    flex: 1;
+    padding: 0 15px;
+    font-size: 28px;
+    color: #666;
+  }
+
+  .cof-total-price {
+    color: $color-danger;
+  }
+
+  .cof-btn-container {
+    flex: 0 0 auto;
+  }
+
+  .cof-btn-submit {
+    padding: 30px 20px;
+    background: $color-danger;
+    min-width: 300px;
+    line-height: 48px;
+    border-radius: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+
+    &[disabled] {
+      background: #f08c79;
+      color: #fff;
+    }
+  }
+}

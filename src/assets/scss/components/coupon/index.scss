@@ -1,0 +1,114 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-coupon-list {
+  padding-top: 20px;
+}
+
+.i-coupon-item {
+  @include set-bg-init;
+  position: relative;
+  margin: 0 auto 20px;
+  padding: 80px 260px 70px 50px;
+  width: 700px;
+  height: 245px;
+
+  .ci-sub-info {
+    position: absolute;
+    left: 50px;
+    bottom: 15px;
+  }
+
+  .ci-name,
+  .ci-condition,
+  .ci-range,
+  .ci-time {
+    display: block;
+    color: #000;
+  }
+
+  .ci-name {
+    line-height: 60px;
+    font-size: 54px;
+    font-weight: bold;
+  }
+
+  .ci-condition {
+    line-height: 28px;
+    font-size: 22px;
+  }
+
+  .ci-range,
+  .ci-time {
+    line-height: 24px;
+    font-size: 18px;
+  }
+
+  .ci-value {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+  }
+
+  .ci-value-text,
+  .ci-value-unit {
+    display: inline-block;
+  }
+
+  .ci-value-text {
+    position: relative;
+    padding-right: 22px;
+    font-size: 82px;
+  }
+
+  .ci-value-unit,
+  .ci-value-addon {
+    position: absolute;
+    right: 0;
+  }
+
+  .ci-value-unit {
+    bottom: 10px;
+    font-size: 20px;
+  }
+
+  .ci-value-addon {
+    display: none;
+  }
+
+  .ci-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    padding: 25px 10px;
+    min-width: 112px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #fdd815;
+  }
+
+  &.discount {
+
+    .ci-value-text {
+      padding-right: 50px;
+    }
+
+    .ci-value-unit {
+      bottom: auto;
+      top: 4px;
+      font-size: 48px;
+    }
+
+    .ci-value-addon {
+      display: inline-block;
+      bottom: 8px;
+      font-size: 20px;
+      color: #fdd815;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-material-columns {
+  height: 150px;
+
+  .mc-row,
+  .mc-col,
+  .mc-image-item {
+    height: 100%;
+  }
+
+  .mc-row {
+    @include set-flex;
+  }
+
+  .mc-col {
+    flex: 1 1 auto;
+  }
+
+  .mc-image-item {
+    width: 100%;
+  }
+}

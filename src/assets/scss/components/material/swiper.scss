@@ -1,0 +1,15 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-material-swiper {
+  height: 1030px;
+
+  .ms-swiper {
+    height: 100%;
+  }
+
+  .ms-image-item {
+    width: 100%;
+    height: 100%;
+  }
+}

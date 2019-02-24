@@ -1,0 +1,58 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "micro-mall",
+	"description": "汤臣倍健官方旗舰店，微信小程序商城",
+	"appid": "wx4697d4d2cba7eb4c",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "开发",
+					"pathName": "pages/order/list",
+					"query": "form=cart",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "开发",
+					"pathName": "pages/product/detail",
+					"query": "id=281",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "开发",
+					"pathName": "pages/member/index",
+					"query": "id=281",
+					"scene": null
+				}
+			]
+		}
+	}
+}

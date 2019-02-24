@@ -1,0 +1,59 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-navbar {
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar {
+    @include set-flex;
+    background: #fff;
+  }
+
+  .navbar-item {
+    position: relative;
+    @include set-button;
+    flex: 1 1 auto;
+    padding: 0 20px;
+    color: #272727;
+
+    &:active {
+      background: #f1f1f1;
+    }
+
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #e5e5e5;
+      width: 1PX;
+      height: 28px;
+    }
+
+    &:last-child {
+
+      &:after {
+        content: none;
+      }
+    }
+
+    &.active > .ni-text {
+      border-bottom-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  .ni-text {
+    display: inline-block;
+    padding: 16px 0;
+    border-bottom: solid 3px transparent;
+  }
+}

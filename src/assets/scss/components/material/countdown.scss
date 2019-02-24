@@ -1,0 +1,78 @@
+@import "../../modules/variables";
+@import "../../modules/mixins";
+
+.i-material-countdown {
+  padding: 20px 25px;
+
+  .mc-dialog {
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    border-radius: 8px;
+  }
+
+  .mc-cover {
+    height: 338px;
+  }
+
+  .mc-cover-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mc-bt-container {
+    @include set-flex;
+    padding: 10px 20px 20px;
+  }
+
+  .mc-bt-contents {
+    flex: 1;
+  }
+
+  .mc-bt-title {
+    @include set-text-multi-line(1);
+    line-height: 48px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #272727;
+  }
+
+  .mc-bt-subtitle {
+    @include set-text-multi-line(1);
+    line-height: 40px;
+    font-size: 24px;
+  }
+
+  .mc-bt-label {
+    margin-right: 10px;
+    color: $color-primary;
+  }
+
+  .mc-bt-addon {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-left: 10px;
+  }
+
+  .mc-bt-tag {
+    padding: 0 10px;
+    background: #ededed;
+    min-width: 140px;
+    border-radius: 24px;
+    line-height: 48px;
+    font-size: 0;
+    color: #272727;
+  }
+
+  .mc-bt-tag-icon {
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+  }
+
+  .mc-bt-tag-text {
+    display: inline-block;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}

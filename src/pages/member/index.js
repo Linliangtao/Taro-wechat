@@ -1,15 +1,26 @@
 import Taro from '@tarojs/taro'
 import {  View, Text,Image} from '@tarojs/components'
-import BaseView from '../base-view'
 
+import BaseView from '../base-view'
 import memberApi from '../../api/member'
-import BgView from '../../assets/images/banner_top.png'
-import BgUserView from '../../assets/images/banner_top_user.png'
-import NavExpressView from '../../assets/images/icon_nav_express.png'
+
 import '../../assets/scss/pages/member/index.scss'
 
 
 export default class MemberIndexView extends BaseView {
+
+  constructor () {
+    super()
+
+    this.state = {
+      centerData: {
+        // NickName:'',
+        // HeadPicPath: {},
+      },
+
+    }
+  }
+
   config = {
     navigationBarTitleText: '会员中心'
   }
@@ -28,15 +39,17 @@ export default class MemberIndexView extends BaseView {
   }
 
   /**
-   * 获取数据
+   * 获取数据F
    * @returns {Promise<void>}
    */
   async getData () {
     try {
-      const { data: model } = await memberApi.getMyCenter()
+      const { data: model } = await memberApi.getMyCenter();
+      console.log(model);
       this.setState({
-        model
+        centerData:model
       })
+      console.log('---', this.state);
     } catch (e) {
       this.$util.showToast(e.errmsg)
     }
@@ -64,20 +77,26 @@ export default class MemberIndexView extends BaseView {
   }
 
   render () {
+
+    const { HeadPicPath, NickName } = this.state.centerData
+
     return(
 
       <View className='i-page-member-index i-page'>
 
         {/* // top-banner */}
         <View className='top-banner'>
-          <Image className='top-banner-bg' mode='widthFix' src={BgView} />
+          <Image className='top-banner-bg' mode='widthFix' src={require('../../assets/images/banner_top.png')} />
         </View>
         <View className='user'>
-          <Image className='user-images' mode='widthFix' src={BgUserView} />
+          <Image className='user-images' mode='widthFix' src={HeadPicPath} />
+
           <View className='message'>
-            <View className='name'>某某某</View>
+            <View className='name'>{NickName}</View>
           </View>
         </View>
+
+
         {/***图标***/}
         <View className='list nav-bg'>
           <View className='list-li' onClick={this.goToPage.bind(this, '1', '/pages/order/list')}>
@@ -86,24 +105,28 @@ export default class MemberIndexView extends BaseView {
               <Text>待收款</Text>
             </View>
           </View>
+
           <View className='list-li' onClick={this.goToPage.bind(this, '2', '/pages/order/list')}>
             <View className='list-on'>
               <Image className='image-size' src={require('../../assets/images/icon_fh.png')} />
               <Text>待发货</Text>
             </View>
           </View>
+
           <View className='list-li' onClick={this.goToPage.bind(this, '3', '/pages/order/list')}>
             <View className='list-on'>
               <Image className='image-size' src={require('../../assets/images/icon_sh.png')} />
               <Text>待收货</Text>
             </View>
           </View>
+
           <View className='list-li' onClick={this.goToPage.bind(this, '4', '/pages/order/list')}>
             <View className='list-on'>
               <Image className='image-size' src={require('../../assets/images/icon_pj.png')} />
               <Text>待评价</Text>
             </View>
           </View>
+
           <View className='list-li' onClick={this.goToPage.bind(this, '0', '/pages/order/list')}>
             <View className='list-on'>
               <Image className='image-size'  src={require('../../assets/images/icon_ad.png')} />
@@ -113,12 +136,13 @@ export default class MemberIndexView extends BaseView {
 
         </View>
 
+
         {/* // 功能 */}
         <View className='nav-bg'>
 
           <View className='nav-meu li-border-top li-border-b-1' data-url='/pages/member/address-list' onClick={this.goPage}>
             <View className='nav-inner sales-volume-wrap'>
-              <Image className='xl-icon' src={NavExpressView} />
+              <Image className='xl-icon' src={require('../../assets/images/icon_nav_express.png')} />
               <Text className='sales-volume'>收货地址</Text>
             </View>
             <View className='xl-icon-left'>
@@ -158,11 +182,7 @@ export default class MemberIndexView extends BaseView {
               <Image className='icon-size' src={require('../../assets/images/icon_arrow.png')} />
             </View>
           </View>
-
-
         </View>
-
-
       </View>
 
     )
